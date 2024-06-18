@@ -30,4 +30,4 @@ static const u16 m1_pmu_event_affinity[M1_PMU_PERFCTR_LAST + 1] = {
 
 ## References
 
-[Apple Silicon CPU Optimization Guide](https://developer.apple.com/download/apple-silicon-cpu-optimization-guide/)
+[Apple Silicon CPU Optimization Guide-Chapter 6. Performance Monitoring](https://developer.apple.com/download/apple-silicon-cpu-optimization-guide/)
