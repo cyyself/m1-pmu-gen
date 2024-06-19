@@ -14,7 +14,6 @@ A optional step is to download the [Apple Silicon CPU Optimization Guide](https:
 
 ```bash
 ./gen_perf_patch.py -a ~/Downloads/Apple-Silicon-CPU-Optimization-Guide.pdf -w a14 a15 > $PATH_TO_LINUX/apple_pmu.patch
-# Note: This pdf file is optional, it is used to generate the event descriptions.
 cd $PATH_TO_LINUX
 patch -p1 < apple_pmu.patch
 cd tools/perf
@@ -81,6 +80,14 @@ static const u16 m1_pmu_event_affinity[M1_PMU_PERFCTR_LAST + 1] = {
 ```
 
 Note: This is only to generate register definitions and affinity for the events in PMU driver. When the affinity table in the kernel is correct, you don't need to generate it and compile the kernel.
+
+## Why we need this?
+
+The definition of the Apple PMU events is not in the Linux kernel source code, but we can find the event name, event code, and event affinity to each PMU counter in the `/usr/share/kpep` directory in macOS. The event descriptions are in the [Apple Silicon CPU Optimization Guide](https://developer.apple.com/download/apple-silicon-cpu-optimization-guide/).
+
+However, because of the license issue, we can't directly submit this information to the Linux kernel source code. I have consulted the Apple Legal Team but haven't gotten a response yet.
+
+Thus, for now, having a script to generate the event definitions and descriptions for the Linux PMU driver and perf tool will be helpful for the community.
 
 ## References
 
