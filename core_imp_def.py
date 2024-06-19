@@ -8,7 +8,7 @@ def get_brief_desc(desc):
     return desc.split("(")[0].split("Note:")[0].split(".")[0] \
                .split(",")[0].strip()
 
-def gen_core_imp_def_dict(pl, desc = dict()):
+def gen_core_imp_def_dict(pl, desc=dict()):
     events = pl["system"]["cpu"]["events"]
     res = []
     for key, value in events.items():
@@ -23,7 +23,7 @@ def gen_core_imp_def_dict(pl, desc = dict()):
                 "BriefDescription": BriefDescription,
             })
     return res
-            
+
 if __name__ == "__main__":
     import sys
     if len(sys.argv) < 2:
