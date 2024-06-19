@@ -40,9 +40,11 @@ def gen_apple_midr(part_num):
                 variant << 20,
                 impId << 24])
 
-def gen_mapfile_csvlines():
+def gen_mapfile_csvlines(white_list=None):
     res = []
     for key in apple_part_num:
+        if white_list and key not in white_list:
+            continue
         for part_num, uarch, soc in apple_part_num[key]:
             res.append("{:#018x},v1,apple/{},core". \
                        format(gen_apple_midr(part_num), key))
