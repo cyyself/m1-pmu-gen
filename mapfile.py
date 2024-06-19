@@ -50,6 +50,16 @@ def gen_mapfile_csvlines(white_list=None):
                        format(gen_apple_midr(part_num), key))
     return res
 
+def gen_csv_patch(white_list=None):
+    lines = list(map(lambda x: '+' + x, gen_mapfile_csvlines(white_list)))
+    return f"""
+diff --git a/tools/perf/pmu-events/arch/arm64/mapfile.csv b/tools/perf/pmu-events/arch/arm64/mapfile.csv
+--- a/tools/perf/pmu-events/arch/arm64/mapfile.csv
++++ b/tools/perf/pmu-events/arch/arm64/mapfile.csv
+@@ -45,0 +45,{len(lines)} @@
+{"\n".join(lines)}
+""".strip()
+
 if __name__ == "__main__":
     for line in gen_mapfile_csvlines():
         print(line)
