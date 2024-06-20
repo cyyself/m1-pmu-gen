@@ -7,23 +7,23 @@
 # part number for Apple Silicon collected from Internet
 apple_part_num = {
     'a14': [
-        (0x20, 'icestorm', 'a14'),
+        (0x20, 'icestorm',  'a14'),
         (0x21, 'firestorm', 'a14'),
-        (0x22, 'icestorm', 'm1'),
+        (0x22, 'icestorm',  'm1'),
         (0x23, 'firestorm', 'm1'),
-        (0x24, 'icestorm', 'm1-pro'),
+        (0x24, 'icestorm',  'm1-pro'),
         (0x25, 'firestorm', 'm1-pro'),
-        (0x28, 'icestorm', 'm1-max'),
+        (0x28, 'icestorm',  'm1-max'),
         (0x29, 'firestorm', 'm1-max'),
     ],
     'a15': [
-        (0x30, 'blizzard', 'a15'),
+        (0x30, 'blizzard',  'a15'),
         (0x31, 'avalanche', 'a15'),
-        (0x32, 'blizzard', 'm2'),
+        (0x32, 'blizzard',  'm2'),
         (0x33, 'avalanche', 'm2'),
-        (0x34, 'blizzard', 'm2-pro'),
+        (0x34, 'blizzard',  'm2-pro'),
         (0x35, 'avalanche', 'm2-pro'),
-        (0x38, 'blizzard', 'm2-max'),
+        (0x38, 'blizzard',  'm2-max'),
         (0x39, 'avalanche', 'm2-max'),
     ]
 }
