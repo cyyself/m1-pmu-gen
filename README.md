@@ -57,6 +57,10 @@ Enjoy profiling your Apple Silicon Macs in Linux!
 
 ## Usage - Generate the PMU Driver
 
+The register definitions and affinity table for M1 and M2 are already updated in the kernel source code since [Linux Mainline Kernel v6.12](https://github.com/torvalds/linux/commit/3cce331ee2a4cc99328757a9bd297ad9a39609e8) and [asahi-linux v6.11](https://github.com/AsahiLinux/linux/commit/ac5bb3788b4edeac2f30cd6fd10f276e2ae98bb9). For these versions, you don't need to generate the register definitions and affinity table.
+
+If you need to generate the register definitions and affinity table for other Apple Silicon Macs, you can follow the steps below.
+
 On macOS:
 
 ```bash
