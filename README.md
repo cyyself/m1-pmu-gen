@@ -14,6 +14,7 @@ A optional step is to download the [Apple Silicon CPU Optimization Guide](https:
 
 ```bash
 ./gen_perf_patch.py -a ~/Downloads/Apple-Silicon-CPU-Optimization-Guide.pdf -w a14 a15 > $PATH_TO_LINUX/apple_pmu.patch
+# Use ./gen_perf_patch.py -w a14 a15 > $PATH_TO_LINUX/apple_pmu.patch if you don't have the pdf file.
 cd $PATH_TO_LINUX
 patch -p1 < apple_pmu.patch
 cd tools/perf
