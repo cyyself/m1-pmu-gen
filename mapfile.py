@@ -6,6 +6,25 @@
 
 # part number for Apple Silicon collected from Internet
 apple_part_num = {
+    'a7': [
+        (0x1, 'cyclone',  'a7'),
+    ],
+    'a8': [
+        (0x2, 'typhoon',  'a8'),
+        (0x3, 'typhoon',  'a8x'),
+    ],
+    'a9': [
+        (0x4, 'twister',  'a9_samsung'),
+        (0x5, 'twister',  'a9_a9x_tsmc'),
+    ],
+    'a10': [
+        (0x6, 'hurricane-zephyr',  'a10_t2'),
+        (0x7, 'hurricane-zephyr',  'a10x'),
+    ],
+    'a11': [
+        (0x8, 'monsoon',  'a11'),
+        (0x9, 'mistral',  'a11'),
+    ],
     'a14': [
         (0x20, 'icestorm',  'a14'),
         (0x21, 'firestorm', 'a14'),
